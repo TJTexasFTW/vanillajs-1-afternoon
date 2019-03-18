@@ -7,6 +7,9 @@ function play(val) {
     const element = document.getElementById(val);
     console.log("val: = " + val);
     
+    if (element.innerText === "X" || element.innerText === "O") {
+        alert("This square already played");
+    } else {
         if (getPlayer.innerText === "X"){
             progress[val] = getPlayer.innerText;
             getPlayer.innerText = "O"
@@ -17,6 +20,7 @@ function play(val) {
         element.innerText = "O"
         
         }
+    }
         console.log(progress);
 }
 

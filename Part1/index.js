@@ -30,13 +30,15 @@ function play(val) {
         element.innerText = "O"
         }
     }   
-    console.log(progress);
+    
 /*Do we have a winner?*/
-if (progress.length = 9) {
+if (progress.length === 9) {
+    console.log("AT IF: " + progress);
     for (var i = 0; i < 9; i++) {
-      if (progress[i] = undefined) {
+        console.log("Check: " + progress[i]);
+      if (progress[i] === undefined) {
         full = false;
-    } else {
+    } else if (progress[i] !== undefined) {
         full = true}
     }
 } else {
@@ -83,7 +85,7 @@ console.log("Full?: " + full)
         (progress[6] === "X" || progress[5] === "O")) && 
         progress[2] === progress[4] && progress[4] === progress[6]) {
         alert("We have a winner - " + progress[2]) 
-    } else if (full = true) {
+    } else if (full === true) {
         alert("We have a draw. . . ") 
     } else {
         /*continue*/
